@@ -1,0 +1,84 @@
+format = """
+[](#26233a)\
+$username\
+[](bg:#403d52 fg:#26233a)\
+$directory\
+[](fg:#403d52 bg:#524f67)\
+$git_branch\
+$git_status\
+[](fg:#524f67)\
+"""
+
+
+# move the rest of the prompt to the right
+right_format = """
+[](#524f67)\
+$nodejs\
+[](bg:#524f67 fg:#403d52)\
+$cmd_duration\
+[](fg:#26233a bg:#403d52)\
+$time\
+[](#26233a)\
+"""
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+[line_break]
+disabled = false
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+style_user = "bg:#26233a"
+style_root = "bg:#26233a fg:#eb6f92"
+format = '[$user ]($style)'
+disabled = false
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+
+[directory]
+style = "bg:#403d52"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+
+[git_branch]
+symbol = ""
+style = "bg:#524f67"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#524f67"
+format = '[$all_status$ahead_behind ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#524f67 fg:#31748f"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#26233a"
+format = '[ $time ]($style)'
+
+[cmd_duration]
+disabled = false
+format = '[ $duration ]($style)'
+style = "bg:#403d52 fg:#f6c177 bold"
