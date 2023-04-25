@@ -1,4 +1,5 @@
 format = """
+$line_break\
 [](#26233a)\
 $username\
 [](bg:#403d52 fg:#26233a)\
@@ -7,22 +8,24 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:#524f67)\
+$line_break\
+$time\
+$character
 """
 
 
 # move the rest of the prompt to the right
-right_format = """
-[](#524f67)\
-$nodejs\
-[](bg:#524f67 fg:#403d52)\
-$cmd_duration\
-[](fg:#26233a bg:#403d52)\
-$time\
-[](#26233a)\
-"""
+# right_format = """
+# [](#524f67)\
+# $nodejs\
+# [](bg:#524f67 fg:#403d52)\
+# $cmd_duration\
+# [](fg:#26233a bg:#403d52)\
+# $time\
+# [](#26233a)\
+# """
 
 # Disable the blank line at the start of the prompt
-add_newline = true
 [line_break]
 disabled = false
 
@@ -69,13 +72,13 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#524f67 fg:#31748f"
+style = "bg:#524f67 fg:#9ccfd8"
 format = '[ $symbol ($version) ]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#26233a"
+#style = "bg:#26233a"
 format = '[ $time ]($style)'
 
 [cmd_duration]
