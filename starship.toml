@@ -1,12 +1,13 @@
 format = """
 $line_break\
-[](#26233a)\
+[](#1f1d2e)\
 $username\
-[](bg:#403d52 fg:#26233a)\
 $directory\
-[](fg:#403d52 bg:#524f67)\
+[](fg:#1f1d2e bg:#26233a)\
 $git_branch\
 $git_status\
+[](fg:#26233a bg:#524f67)\
+$nodejs\
 [](fg:#524f67)\
 $line_break\
 $time\
@@ -33,8 +34,8 @@ disabled = false
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#26233a"
-style_root = "bg:#26233a fg:#eb6f92"
+style_user = "bg:#1f1d2e"
+style_root = "bg:#1f1d2e fg:#eb6f92"
 format = '[$user ]($style)'
 disabled = false
 
@@ -42,7 +43,7 @@ disabled = false
 # represents the current operating system
 
 [directory]
-style = "bg:#403d52"
+style = "bg:#1f1d2e"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -63,11 +64,11 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:#524f67"
+style = "bg:#26233a fg:#c4a7e7"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#524f67"
+style = "bg:#26233a fg:#c4a7e7"
 format = '[$all_status$ahead_behind ]($style)'
 
 [nodejs]
