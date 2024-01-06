@@ -5,6 +5,7 @@ $username\
 $directory\
 [](fg:#1f1d2e bg:#26233a)\
 $git_branch\
+$git_commit\
 $git_status\
 [](fg:#26233a bg:#524f67)\
 $nodejs\
@@ -61,15 +62,20 @@ truncation_symbol = "…/"
 # So either put "Important Documents" before "Documents" or use the substituted version:
 # "Important  " = "  "
 
-
 [git_branch]
 symbol = ""
 style = "bg:#26233a fg:#c4a7e7"
 format = '[ $symbol $branch ]($style)'
 
+[git_commit]
+tag_symbol = "󰓼 "
+tag_disabled = false
+format = '[\($hash $tag\) ]($style)'
+style = "bg:#26233a fg:#c4a7e7"
+
 [git_status]
 style = "bg:#26233a fg:#c4a7e7"
-format = '[$all_status$ahead_behind ]($style)'
+format = '[$all_status$ahead_behind]($style)'
 
 [nodejs]
 symbol = ""
